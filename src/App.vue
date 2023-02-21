@@ -17,7 +17,7 @@ import axios from 'axios';
         //siccome la chiamata avverrà in un secondo momento il then dice di aspettare che avvenga
         // la chiamata e poi si proceda con 
         .then((resp)=>{
-          this.projects = resp.data;
+          this.projects= resp.data;
 
         })
 
@@ -31,37 +31,14 @@ import axios from 'axios';
 
 <template>
   <TheHeader></TheHeader>
+  <ProjectCard></ProjectCard>
 
   <!--In Blade si usava lo @yeld("content")-->
   <!--In vue usiamo il tag router-view-->
 
   <router-view></router-view>
 
-  <div class="container">
-    <h1>Lista Progetti</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Cover</th>
-          <th>Title</th>
-          <th>Type</th>
-          <th>Technolgy</th>
 
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="project in projects" :key="project.id">
-          <div v-if="project.cover_img">
-            <img :src="backendUrl + 'storage/' + project.cover_img" alt="" style="width: 60px;">
-          </div>
-          <td><a :href="'project/' + project.id">{{ project.name }}</a></td>
-          <td>{{ project.description }}</td>
-          <td>{{ project.type }}</td>
-
-        </tr>
-      </tbody>
-    </table>
-  </div>
 </template>
 
 <style lang="scss">
