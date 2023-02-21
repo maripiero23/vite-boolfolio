@@ -35,7 +35,6 @@ import axios from 'axios';
 
   <!--In Blade si usava lo @yeld("content")-->
   <!--In vue usiamo il tag router-view-->
-
   <router-view></router-view>
 
 

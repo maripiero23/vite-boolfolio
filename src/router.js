@@ -10,9 +10,9 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: "/",
-            name: "home",
-            component: HomePage
+            path: "/", //da scrivere nel browser
+            name: "home", // nome della rotta da usare per creare un link
+            component: HomePage // componente che ritorna l'html della pagina
         },
 
         {   //lista di tutti i progetti
